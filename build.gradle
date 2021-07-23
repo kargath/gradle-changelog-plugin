@@ -5,7 +5,7 @@ plugins {
     id 'maven-publish'
     // Comment out the following line prior to first build, then run 'publishToMavenLocal' task,
     // then uncomment this line. Also see the 'changelog' task, below.
-    id 'com.kargath.gradle-conventional-changelog' version '0.3.2'
+    //id 'com.github.kargath.gradle-conventional-changelog' version '0.3.2'
 }
 
 wrapper {
@@ -24,7 +24,7 @@ repositories {
 
 project.ext.pluginId = rootProject['project.pluginId']
 version = rootProject['project.version']
-group = 'com.kargath'
+group = 'com.github.kargath'
 
 pluginBundle {
     website = 'https://github.com/kargath/gradle-changelog-plugin/'
@@ -91,7 +91,7 @@ publishing {
 
 
 // Comment out the following task prior to first build, then run 'publishToMavenLocal' task, then uncomment.
-changelog {
+/*changelog {
     file "CHANGELOG.md"
     versionNum "v$project.version"
     versionText "Awesome Iguana"
@@ -99,4 +99,4 @@ changelog {
     match "^fix|^feat|^doc|^perf|^refactor|BREAKING"
     //from "0.3.0"
     //to "HEAD"
-}
+}*/
